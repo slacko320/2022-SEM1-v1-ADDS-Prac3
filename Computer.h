@@ -66,6 +66,9 @@ class FistfullODollars : public Computer
 {
     public:
     virtual char makeMove();
+
+    private:
+    int moveOrder = 1;
 };
 
 

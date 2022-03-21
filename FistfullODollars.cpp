@@ -4,5 +4,14 @@
 
 char FistfullODollars::makeMove()
 {
-
+    if(moveOrder == 1) {
+        moveOrder ++;
+        return 'R';
+    } else if (moveOrder == 2) {
+        moveOrder ++;
+        return 'P';
+    } else {
+        moveOrder = 1;
+        return 'P';
+    }
 }
