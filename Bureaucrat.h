@@ -4,11 +4,10 @@
 #ifndef BUREAUCRAT_H_
 #define BUREAUCRAT_H_
 
-//  Bureaucrat Class
+// Derived class, Bureaucrat always chooses Paper
 class Bureaucrat : public Computer
 {
-    public:  
-    char Bureaucrat::makeMove();
-
+    public:
+    virtual char makeMove();
 };
 #endif /* BUREAUCRAT_H_ */
