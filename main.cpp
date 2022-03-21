@@ -17,6 +17,7 @@ int main () {
     for(int i=0; i<10; i++) {
         cout << randomComp1.makeMove() << endl;
     }
-
+    //Avalanche aval;
+    //cout << aval.makeMove() << endl;
 return 0;
 }

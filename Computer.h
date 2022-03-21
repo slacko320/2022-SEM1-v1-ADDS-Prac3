@@ -15,10 +15,16 @@ class Computer
 };
 
 // Derived class
-class RandomComputer : public Computer {
+class Avalanche : public Computer {
+};
+
+// Derived class
+class RandomComputer {
    public:
     RandomComputer();
     char makeMove();
 };
+
+
 
 #endif /* COMPUTER_H_ */
