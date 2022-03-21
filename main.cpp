@@ -20,7 +20,7 @@ int main () {
     //Avalanche aval;
     //cout << aval.makeMove() << endl;
 
-    Crescendo tester;
+    PaperDoll tester;
     cout << tester.makeMove() << endl;
     cout << tester.makeMove() << endl;
     cout << tester.makeMove() << endl;

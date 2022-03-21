@@ -56,6 +56,9 @@ class PaperDoll : public Computer
 {
     public:
     virtual char makeMove();
+    
+    private:
+    int moveOrder = 1;    
 };
 
 // Derived class, istfullODollars moves in the following order: Rock, Paper,Paper
