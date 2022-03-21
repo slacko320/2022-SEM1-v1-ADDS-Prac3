@@ -15,6 +15,6 @@ class Referee
 
     // Public method for Referee class
     // This method returns the outcome for player1:  'W', 'L' or 'T' (Win, Lose, Tie)
-    char refGame(Human player1, Computer player2);
+    char refGame(Player* player1, Player* player2);
 };
 #endif /* REFEREE_H_ */

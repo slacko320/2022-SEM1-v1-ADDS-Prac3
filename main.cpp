@@ -20,12 +20,26 @@ int main () {
     //Avalanche aval;
     //cout << aval.makeMove() << endl;
 
-    FistfullODollars tester;
-    cout << tester.makeMove() << endl;
-    cout << tester.makeMove() << endl;
-    cout << tester.makeMove() << endl;
-    cout << tester.makeMove() << endl;
-    cout << tester.makeMove() << endl;
-    cout << tester.makeMove() << endl;
+    FistfullODollars fist;
+    Player * Com1 = &fist;
+    
+    Toolbox toolB;
+    Player * Com2 = &toolB;
+
+    Human P1;
+    Player * Hum1 = &P1;
+
+    Referee ref1;
+    cout << ref1.refGame(Hum1, Com2) << endl;
+    cout << ref1.refGame(Hum1, Com2) << endl;
+    cout << ref1.refGame(Hum1, Com2) << endl;
+    /*
+    cout << Com1->makeMove() << endl;
+    cout << fist.makeMove() << endl;
+    cout << Com1->makeMove() << endl;
+    cout << Com1->makeMove() << endl;
+    cout << Com1->makeMove() << endl;
+    cout << Com1->makeMove() << endl;
+    */
 return 0;
 }

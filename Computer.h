@@ -1,17 +1,19 @@
 // This is Computer.h file
 
+#include "Player.h"
+
 #ifndef COMPUTER_H_
 #define COMPUTER_H_
 
 // Below is Computer Class
-class Computer
+class Computer : public Player
 {
     public:
     // A constructor for Computer Class
     Computer();
 
     // A method for Computer Class
-    char makeMove();
+    virtual char makeMove();
 };
 
 // Derived class, RandomComputer makes random moves.

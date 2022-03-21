@@ -1,10 +1,12 @@
 // This is a Human.h file
 
+#include "Player.h"
+
 #ifndef HUMAN_H_
 #define HUMAN_H_
 
-    // A Human Class
-class Human
+// A Human Class
+class Human : public Player
 {
 
     public:
@@ -12,6 +14,6 @@ class Human
     Human();
 
     // A public method for Human class
-    char makeMove();
+    virtual char makeMove();
 };
 #endif /* HUMAN_H_ */

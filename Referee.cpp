@@ -9,10 +9,10 @@ Referee::Referee()
 }
 
 // returns the outcome for player1: 'W', 'L' or 'T' (Win, Lose, Tie)
-char Referee::refGame(Human player1, Computer player2)
+char Referee::refGame(Player* player1, Player* player2)
 {
-    char P1Move = player1.makeMove();
-    char P2Move = player2.makeMove();
+    char P1Move = player1->makeMove();
+    char P2Move = player2->makeMove();
     
     if((P1Move == 'R' && P2Move == 'R') || (P1Move == 'P' && P2Move == 'P') || (P1Move == 'S' && P2Move == 'S'))
     {
