@@ -7,131 +7,81 @@ Player* Tournament::run(std::array<Player *, 8>  competitors)
     Referee ref1;
     int p1Score = 0;
     int p2Score = 0;
-    int remainingPlayers = 8;
+    char roundResult;
     Player* quarterWinners[4];
-
-    for(int i=0; i<5; i++) {
-        if( ref1.refGame(competitors[0], competitors[1]) == 'W') {
-            p1Score ++;
-        } else if( ref1.refGame(competitors[0], competitors[1]) == 'L') {
-            p2Score ++;
+    Player* semiWinners[2];
+    int num1 = 0;
+    
+    // Quarter-Finals
+    for(int j=0; j<8; j=j+2) {
+        for(int i=0; i<5; i++) {
+            roundResult = ref1.refGame(competitors[j], competitors[j+1]);
+            if( roundResult == 'W') {
+                p1Score ++;
+            } else if( roundResult == 'L') {
+                p2Score ++;
+            } else {
+                // No scores for both players.   
+            };
+        }
+        
+        if(p1Score >= p2Score) {
+            quarterWinners[num1] = competitors[j];
         } else {
-            // No scores for both players.   
-        };
-    }
+            quarterWinners[num1] = competitors[j+1];
+        }
+        
+        num1 ++;
+        p1Score = 0;
+        p2Score = 0;
 
-    if(p1Score >= p2Score) {
-        quarterWinners[0] = competitors[0];
-    }
-    p1Score = 0;
-    p2Score = 0;
+        competitors[j]->resetMoveOrder();
+        competitors[j+1]->resetMoveOrder();
+    } 
 
-    for(int i=0; i<8; i++) {
-        competitors[i] -> resetMoveOrder();
-    }
+    // Semi-Finals
+    num1 = 0;
+    for(int j=0; j<4; j=j+2) {
+        for(int i=0; i<5; i++) {
+            roundResult = ref1.refGame(quarterWinners[j], quarterWinners[j+1]);
+            if( roundResult == 'W') {
+                p1Score ++;
+            } else if( roundResult == 'L') {
+                p2Score ++;
+            } else {
+                // No scores for both players.   
+            };
+        }
 
-    for(int i=0; i<5; i++) {
-        if( ref1.refGame(competitors[2], competitors[3]) == 'W') {
-            p1Score ++;
-        } else if( ref1.refGame(competitors[2], competitors[3]) == 'L') {
-            p2Score ++;
+        if(p1Score >= p2Score) {
+            semiWinners[num1] = quarterWinners[j];
         } else {
-            // No scores for both players.   
-        };
-    }
+            semiWinners[num1] = quarterWinners[j+1];
+        }
+        num1 ++;
+        p1Score = 0;
+        p2Score = 0;
 
-    if(p1Score >= p2Score) {
-        quarterWinners[0] = competitors[0];
-    }
-    p1Score = 0;
-    p2Score = 0;
-
-    for(int i=0; i<8; i++) {
-        competitors[i] -> resetMoveOrder();
-    }
-
-    for(int i=0; i<5; i++) {
-        if( ref1.refGame(competitors[4], competitors[5]) == 'W') {
-            p1Score ++;
-        } else if( ref1.refGame(competitors[4], competitors[5]) == 'L') {
-            p2Score ++;
-        } else {
-            // No scores for both players.   
-        };
-    }
-
-    if(p1Score >= p2Score) {
-        quarterWinners[0] = competitors[0];
-    }
-    p1Score = 0;
-    p2Score = 0;
-
-    for(int i=0; i<8; i++) {
-        competitors[i] -> resetMoveOrder();
-    }
-
-    for(int i=0; i<5; i++) {
-        if( ref1.refGame(competitors[6], competitors[7]) == 'W') {
-            p1Score ++;
-        } else if( ref1.refGame(competitors[6], competitors[7]) == 'L') {
-            p2Score ++;
-        } else {
-            // No scores for both players.   
-        };
-    }        
-
-    if(p1Score >= p2Score) {
-        quarterWinners[0] = competitors[0];
-    }
-    p1Score = 0;
-    p2Score = 0;
-
-    for(int i=0; i<8; i++) {
-        competitors[i] -> resetMoveOrder();
-    }
-
-    // Semi-Final
-
-   for(int i=0; i<5; i++) {
-        if( ref1.refGame(competitors[0], competitors[1]) == 'W') {
-            p1Score ++;
-        } else if( ref1.refGame(competitors[0], competitors[1]) == 'L') {
-            p2Score ++;
-        } else {
-            // No scores for both players.   
-        };
-    }
-
-    if(p1Score >= p2Score) {
-        quarterWinners[0] = competitors[0];
-    }
-    p1Score = 0;
-    p2Score = 0;
-
-    for(int i=0; i<8; i++) {
-        competitors[i] -> resetMoveOrder();
-    }
-
-    for(int i=0; i<5; i++) {
-        if( ref1.refGame(competitors[2], competitors[3]) == 'W') {
-            p1Score ++;
-        } else if( ref1.refGame(competitors[2], competitors[3]) == 'L') {
-            p2Score ++;
-        } else {
-            // No scores for both players.   
-        };
-    }
-
-    if(p1Score >= p2Score) {
-        quarterWinners[0] = competitors[0];
-    }
-    p1Score = 0;
-    p2Score = 0;
-
-    for(int i=0; i<8; i++) {
-        competitors[i] -> resetMoveOrder();
+        quarterWinners[j]->resetMoveOrder();
+        quarterWinners[j+1]->resetMoveOrder();
     }
 
     // Final
+    num1 = 0; 
+    for(int i=0; i<5; i++) {
+        roundResult = ref1.refGame(semiWinners[0], semiWinners[1]);
+        if( roundResult == 'W') {
+            p1Score ++;
+        } else if( roundResult == 'L') {
+            p2Score ++;
+        } else {
+            // No scores for both players.   
+        };
+    }
 
+    if(p1Score >= p2Score) {
+        return semiWinners[0];
+    } else {
+        return semiWinners[1];
+    }
 }
