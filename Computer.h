@@ -48,7 +48,8 @@ class Crescendo : public Computer
 {
     public:
     virtual char makeMove();
-    
+    void resetMoveOrder();
+
     private:
     int moveOrder = 1;
 };
@@ -58,7 +59,8 @@ class PaperDoll : public Computer
 {
     public:
     virtual char makeMove();
-    
+    void resetMoveOrder();
+
     private:
     int moveOrder = 1;    
 };
@@ -68,6 +70,7 @@ class FistfullODollars : public Computer
 {
     public:
     virtual char makeMove();
+    void resetMoveOrder();
 
     private:
     int moveOrder = 1;

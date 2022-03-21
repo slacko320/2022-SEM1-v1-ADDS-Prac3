@@ -16,3 +16,8 @@ char Crescendo::makeMove()
         return 'R';
     }
 }
+
+void Crescendo::resetMoveOrder() 
+{
+    moveOrder = 1;
+}

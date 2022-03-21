@@ -30,16 +30,16 @@ int main () {
     Player * Hum1 = &P1;
 
     Referee ref1;
-    cout << ref1.refGame(Hum1, Com2) << endl;
-    cout << ref1.refGame(Hum1, Com2) << endl;
-    cout << ref1.refGame(Hum1, Com2) << endl;
     /*
-    cout << Com1->makeMove() << endl;
-    cout << fist.makeMove() << endl;
-    cout << Com1->makeMove() << endl;
-    cout << Com1->makeMove() << endl;
-    cout << Com1->makeMove() << endl;
-    cout << Com1->makeMove() << endl;
+    cout << ref1.refGame(Hum1, Com1) << endl;
+    cout << ref1.refGame(Hum1, Com1) << endl;
+    cout << ref1.refGame(Hum1, Com1) << endl;
     */
+    cout << Com1->makeMove() << endl;
+    cout << Com1->makeMove() << endl;
+    Com1->resetMoveOrder();
+    cout << Com1->makeMove() << endl;
+    cout << Com1->makeMove() << endl;
+
 return 0;
 }

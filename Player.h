@@ -8,6 +8,10 @@ class Player
 {
     public:
     virtual char makeMove() = 0;
+    virtual void resetMoveOrder()
+    {
+        // do nothing
+    }
 };
 
 #endif /* PLAYER_H_ */

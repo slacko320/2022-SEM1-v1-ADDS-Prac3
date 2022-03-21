@@ -15,3 +15,8 @@ char PaperDoll::makeMove()
         return 'S';
     }
 }
+
+void PaperDoll::resetMoveOrder() 
+{
+    moveOrder = 1;
+}

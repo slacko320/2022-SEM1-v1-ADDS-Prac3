@@ -15,3 +15,8 @@ char FistfullODollars::makeMove()
         return 'P';
     }
 }
+
+void FistfullODollars::resetMoveOrder() 
+{
+    moveOrder = 1;
+}
