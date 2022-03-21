@@ -14,10 +14,13 @@ int main () {
 
 
 //    cout << Ref1.refGame(Player1, Comp1) << endl;
-    for(int i=0; i<10; i++) {
+    /*for(int i=0; i<10; i++) {
         cout << randomComp1.makeMove() << endl;
-    }
+    }*/
     //Avalanche aval;
     //cout << aval.makeMove() << endl;
+
+    Bureaucrat bure;
+    cout << bure.makeMove() << endl;
 return 0;
 }

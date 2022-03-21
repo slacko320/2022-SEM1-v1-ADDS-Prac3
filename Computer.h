@@ -3,7 +3,7 @@
 #ifndef COMPUTER_H_
 #define COMPUTER_H_
 
-    // Below is Computer Class
+// Below is Computer Class
 class Computer
 {
     public:
@@ -14,17 +14,21 @@ class Computer
     char makeMove();
 };
 
-// Derived class
+// Derived class, RandomComputer makes random moves.
+class RandomComputer : public Computer {
+   public:
+    RandomComputer();
+    virtual char makeMove();
+};
+
+// Derived class, Avalanche always chooses Rock
 class Avalanche : public Computer {
 };
 
-// Derived class
-class RandomComputer {
-   public:
-    RandomComputer();
+// Derived class, Bureaucrat always chooses Paper
+class Bureaucrat {
+    public:
     char makeMove();
 };
-
-
 
 #endif /* COMPUTER_H_ */
