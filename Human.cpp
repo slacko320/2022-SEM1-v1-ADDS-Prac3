@@ -14,7 +14,9 @@ Human::Human()
 char Human::makeMove()
 {
     char move;
-    cout << "Enter move: ";
-    cin >> move;
+    while(move != 'R' && move != 'P' && move != 'S') {
+        cout << "Enter move (Type one of the three: R, P or S): ";
+        cin >> move;
+    }
     return move;
 }
