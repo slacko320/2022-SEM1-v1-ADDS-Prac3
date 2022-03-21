@@ -4,7 +4,7 @@
 #ifndef CRESCENDO_H_
 #define CRESCENDO_H_
 
-// Crescendo Class
+// Derived class, Crescendo moves in the following order: Paper, Scissors, Rock.
 class Crescendo : public Computer
 {
     public:
@@ -14,4 +14,5 @@ class Crescendo : public Computer
     private:
     int moveOrder = 1;
 };
+
 #endif /* CRESCENDO_H_ */
