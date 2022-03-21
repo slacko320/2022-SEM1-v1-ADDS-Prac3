@@ -1,5 +1,5 @@
-// This is Computer.h file
-
+// RandomComputer.h
+/*
 #ifndef COMPUTER_H_
 #define COMPUTER_H_
 
@@ -13,12 +13,5 @@ class Computer
     // A method for Computer Class
     char makeMove();
 };
-
-// Derived class
-class RandomComputer : public Computer {
-   public:
-    RandomComputer();
-    char makeMove();
-};
-
 #endif /* COMPUTER_H_ */
+*/
