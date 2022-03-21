@@ -6,12 +6,12 @@
 using namespace std;
 
 int main () {
-
+/*
     Computer Comp1;
     Human Player1;
     Referee Ref1;
     RandomComputer randomComp1;
-
+*/
 
 //    cout << Ref1.refGame(Player1, Comp1) << endl;
     /*for(int i=0; i<10; i++) {
@@ -20,7 +20,12 @@ int main () {
     //Avalanche aval;
     //cout << aval.makeMove() << endl;
 
-    Bureaucrat bure;
-    cout << bure.makeMove() << endl;
+    Crescendo tester;
+    cout << tester.makeMove() << endl;
+    cout << tester.makeMove() << endl;
+    cout << tester.makeMove() << endl;
+    cout << tester.makeMove() << endl;
+    cout << tester.makeMove() << endl;
+    cout << tester.makeMove() << endl;
 return 0;
 }

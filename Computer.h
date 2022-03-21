@@ -46,6 +46,9 @@ class Crescendo : public Computer
 {
     public:
     virtual char makeMove();
+    
+    private:
+    int moveOrder = 1;
 };
 
 // Derived class, PaperDoll moves in the following order: Paper, Scissors, Scissors.

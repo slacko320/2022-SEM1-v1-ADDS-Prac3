@@ -3,7 +3,7 @@
 
 #include "Computer.h"
 
-char ::makeMove()
+char Toolbox::makeMove()
 {
     return 'S';
 }
