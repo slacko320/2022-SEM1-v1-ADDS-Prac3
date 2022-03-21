@@ -1,5 +1,4 @@
 // Avalanche.cpp
 // Avalanche always chooses Rock.
-
-#include "Computer.h"
+#include "Avalanche.h"
 // Avalanche acts exact the same as Computer class

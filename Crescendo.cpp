@@ -1,7 +1,7 @@
 // Crescendo.cpp
 // Crescendo moves in the following order: Paper, Scissors, Rock.
 
-#include "Computer.h"
+#include "Crescendo.h"
 
 char Crescendo::makeMove()
 {   

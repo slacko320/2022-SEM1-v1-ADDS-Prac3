@@ -1,6 +1,6 @@
 // PaperDoll.cpp
 // PaperDoll moves in the following order: Paper, Scissors, Scissors.
-#include "Computer.h"
+#include "PaperDoll.h"
 
 char PaperDoll::makeMove()
 {

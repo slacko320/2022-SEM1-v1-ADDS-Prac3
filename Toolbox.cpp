@@ -1,7 +1,7 @@
 // Toolbox.cpp
 // Toolbox always chooses Scissors.
 
-#include "Computer.h"
+#include "Toolbox.h"
 
 char Toolbox::makeMove()
 {

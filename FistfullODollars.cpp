@@ -1,6 +1,6 @@
 // FistfullODollars.cpp
 // FistfullODollars moves in the following order: Rock, Paper,Paper
-#include "Computer.h"
+#include "FistfullODollars.h"
 
 char FistfullODollars::makeMove()
 {

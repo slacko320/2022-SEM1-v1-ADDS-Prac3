@@ -1,6 +1,6 @@
 // RandomComputer.cpp
 // RandomComputer returns a random move.
-#include "Computer.h"
+#include "RandomComputer.h"
 #include <stdio.h>      /* printf, NULL */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
