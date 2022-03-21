@@ -15,20 +15,29 @@ class Computer
 };
 
 // Derived class, RandomComputer makes random moves.
-class RandomComputer : public Computer {
+class RandomComputer : public Computer 
+{
    public:
     RandomComputer();
     virtual char makeMove();
 };
 
 // Derived class, Avalanche always chooses Rock
-class Avalanche : public Computer {
+class Avalanche : public Computer 
+{
 };
 
 // Derived class, Bureaucrat always chooses Paper
-class Bureaucrat {
+class Bureaucrat 
+{
     public:
-    char makeMove();
+    virtual char makeMove();
+};
+// Derived class, Toolbox always chooses Scissors
+class Toolbox 
+{
+    public:
+    virtual char makeMove();
 };
 
 #endif /* COMPUTER_H_ */
