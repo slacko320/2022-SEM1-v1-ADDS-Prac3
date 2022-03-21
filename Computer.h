@@ -28,16 +28,39 @@ class Avalanche : public Computer
 };
 
 // Derived class, Bureaucrat always chooses Paper
-class Bureaucrat 
+class Bureaucrat : public Computer
 {
     public:
     virtual char makeMove();
 };
+
 // Derived class, Toolbox always chooses Scissors
-class Toolbox 
+class Toolbox : public Computer
 {
     public:
     virtual char makeMove();
 };
+
+// Derived class, Crescendo moves in the following order: Paper, Scissors, Rock.
+class Crescendo : public Computer
+{
+    public:
+    virtual char makeMove();
+};
+
+// Derived class, PaperDoll moves in the following order: Paper, Scissors, Scissors.
+class PaperDoll : public Computer
+{
+    public:
+    virtual char makeMove();
+};
+
+// Derived class, istfullODollars moves in the following order: Rock, Paper,Paper
+class FistfullODollars : public Computer
+{
+    public:
+    virtual char makeMove();
+};
+
 
 #endif /* COMPUTER_H_ */
